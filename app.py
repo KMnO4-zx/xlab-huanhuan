@@ -7,14 +7,16 @@ from modelscope import snapshot_download
 
 # 在侧边栏中创建一个标题和一个链接
 with st.sidebar:
-    st.markdown("## DeepSeek LLM")
+    st.markdown("## InternLM LLM")
+    "[InternLM](https://github.com/InternLM/InternLM.git)"
     "[开源大模型食用指南 self-llm](https://github.com/datawhalechina/self-llm.git)"
+    "[Chat嬛嬛](https://github.com/KMnO4-zx/huanhuan-chat.git)"
     # 创建一个滑块，用于选择最大长度，范围在0到1024之间，默认值为512
     max_length = st.slider("max_length", 0, 1024, 512, step=1)
     system_prompt = st.text_input("System_Prompt", "现在你要扮演皇帝身边的女人--甄嬛")
 
 # 创建一个标题和一个副标题
-st.title("💬 Chat-Qwen")
+st.title("💬 Chat-嬛嬛")
 st.caption("🚀 A streamlit chatbot powered by Self-LLM")
 
 # 定义模型路径
