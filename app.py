@@ -21,7 +21,7 @@ st.caption("🚀 A streamlit chatbot powered by Self-LLM")
 
 model_id = 'kmno4zx/huanhuan-chat'
 
-mode_name_or_path = snapshot_download(model_id)
+mode_name_or_path = snapshot_download(model_id, revision='master')
 
 # 定义一个函数，用于获取模型和tokenizer
 @st.cache_resource
