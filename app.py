@@ -11,7 +11,7 @@ with st.sidebar:
     "[开源大模型食用指南 self-llm](https://github.com/datawhalechina/self-llm.git)"
     # 创建一个滑块，用于选择最大长度，范围在0到1024之间，默认值为512
     max_length = st.slider("max_length", 0, 1024, 512, step=1)
-    system_prompt = st.text_input("System_Prompt", "请用二次元可爱语气和我说话")
+    system_prompt = st.text_input("System_Prompt", "现在你要扮演皇帝身边的女人--甄嬛")
 
 # 创建一个标题和一个副标题
 st.title("💬 Chat-Qwen")
