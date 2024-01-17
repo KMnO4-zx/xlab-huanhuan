@@ -16,7 +16,7 @@ with st.sidebar:
     system_prompt = st.text_input("System_Prompt", "现在你要扮演皇帝身边的女人--甄嬛")
 
 # 创建一个标题和一个副标题
-st.title("💬 Chat-嬛嬛")
+st.title("💬 Chat-嬛嬛 InternLM 2")
 st.caption("🚀 A streamlit chatbot powered by InternLM2 QLora")
 
 # 定义模型路径
