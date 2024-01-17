@@ -17,13 +17,14 @@ with st.sidebar:
 
 # 创建一个标题和一个副标题
 st.title("💬 Chat-嬛嬛")
-st.caption("🚀 A streamlit chatbot powered by Self-LLM")
+st.caption("🚀 A streamlit chatbot powered by InternLM2 QLora")
 
 # 定义模型路径
 
-model_id = 'kmno4zx/huanhuan-chat'
+model_id = 'kmno4zx/huanhuan-chat-internlm2'
 
 mode_name_or_path = snapshot_download(model_id, revision='master')
+
 
 # 定义一个函数，用于获取模型和tokenizer
 @st.cache_resource
@@ -31,10 +32,7 @@ def get_model():
     # 从预训练的模型中获取tokenizer
     tokenizer = AutoTokenizer.from_pretrained(mode_name_or_path, trust_remote_code=True)
     # 从预训练的模型中获取模型，并设置模型参数
-    model = AutoModelForCausalLM.from_pretrained(mode_name_or_path, device_map='auto', torch_dtype=torch.bfloat16, trust_remote_code=True).eval()
-    # Specify hyperparameters for generation
-    model.generation_config = GenerationConfig.from_pretrained(mode_name_or_path, trust_remote_code=True) # 可指定不同的生成长度、top_p等相关超参
-    # 设置模型为评估模式
+    model = AutoModelForCausalLM.from_pretrained(mode_name_or_path, trust_remote_code=True, torch_dtype=torch.bfloat16).cuda()
     model.eval()  
     return tokenizer, model
 
@@ -55,7 +53,7 @@ if prompt := st.chat_input():
     # 在聊天界面上显示用户的输入
     st.chat_message("user").write(prompt)
     # 构建输入     
-    response, history = model.chat(tokenizer, prompt, system=system_prompt, history=st.session_state.messages)
+    response, history = model.chat(tokenizer, prompt, meta_instruction=system_prompt, history=st.session_state.messages)
     # 将模型的输出添加到session_state中的messages列表中
     st.session_state.messages.append((prompt, response))
     # 在聊天界面上显示模型的输出
