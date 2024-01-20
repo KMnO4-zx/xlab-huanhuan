@@ -60,3 +60,9 @@
 &emsp;&emsp;***OPenXLab Chat嬛嬛  https://openxlab.org.cn/apps/detail/BYCJS/Chat_huanhuan***
 
 ![Alt text](images/openxlab.png)
+
+## 致谢
+
+***感谢上海人工智能实验室提供的算力~***
+
+***感谢小助手对项目的支持~***
