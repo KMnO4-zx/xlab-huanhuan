@@ -1,5 +1,9 @@
 # Chat-嬛嬛
 
+***OpenXLab 体验地址：https://openxlab.org.cn/apps/detail/BYCJS/Chat_huanhuan***
+
+***Chat-嬛嬛 模型下载地址：https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary***
+
 ## 介绍
 
 &emsp;&emsp;Chat-甄嬛是利用《甄嬛传》剧本中所有关于甄嬛的台词和语句，基于[InternLM2](https://github.com/InternLM/InternLM.git)进行LoRA微调或全量微调得到的模仿甄嬛语气的聊天语言模型。
@@ -11,6 +15,13 @@
 > 具体如何实现全流程的 Character-AI 微调，可参考主仓库-[huanhuan-chat](https://github.com/KMnO4-zx/huanhuan-chat.git)。
 
 &emsp;&emsp;***欢迎大家来给[InternLM2](https://github.com/InternLM/InternLM.git)，点点star哦~***
+
+## News
+
+***1月22日，Chat-嬛嬛应用在 OpenXLab，累计聊天次数已达 3.64k 次，感谢大家的支持~***
+
+***1月22日，Chat-嬛嬛模型 魔搭 累计下载 3107 次！***
+
 
 ## MdeolScope 模型
 
