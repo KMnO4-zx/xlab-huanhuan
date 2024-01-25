@@ -4,6 +4,8 @@
 
 ***Chat-嬛嬛 模型下载地址：https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary***
 
+> *此仓库主要用于将 Chat嬛嬛 项目部署到 OpenXLab 或 ModelScope 。*
+
 ## 介绍
 
 &emsp;&emsp;Chat-甄嬛是利用《甄嬛传》剧本中所有关于甄嬛的台词和语句，基于[InternLM2](https://github.com/InternLM/InternLM.git)进行LoRA微调或全量微调得到的模仿甄嬛语气的聊天语言模型。
@@ -16,7 +18,7 @@
 
 &emsp;&emsp;***欢迎大家来给[InternLM2](https://github.com/InternLM/InternLM.git)，点点star哦~***
 
-## News
+## *News*
 
 ***1月22日，Chat-嬛嬛应用在 OpenXLab，累计聊天次数已达 3.64k 次，感谢大家的支持~***
 
@@ -72,8 +74,68 @@
 
 ![Alt text](images/openxlab.png)
 
+## LmDeploy部署
+
+- 首先安装LmDeploy
+
+```shell
+pip install -U lmdeploy
+```
+
+- 然后转换模型为`turbomind`格式
+
+> --dst-path: 可以指定转换后的模型存储位置。
+
+```shell
+lmdeploy convert internlm2-chat-7b  要转化的模型地址 --dst-path 转换后的模型地址
+```
+
+- LmDeploy Chat 对话
+
+```shell
+lmdeploy chat turbomind 转换后的turbomind模型地址
+```
+
+## OpneCompass 评测
+
+- 安装 OpenCompass
+
+```shell
+git clone https://github.com/open-compass/opencompass
+cd opencompass
+pip install -e .
+```
+
+- 下载解压数据集
+
+```shell
+cp /share/temp/datasets/OpenCompassData-core-20231110.zip /root/opencompass/
+unzip OpenCompassData-core-20231110.zip
+```
+
+- 评测启动！
+
+```shell
+python run.py \
+    --datasets ceval_gen \
+    --hf-path /root/model/huanhuan/kmno4zx/huanhuan-chat-internlm2 \
+    --tokenizer-path /root/model/huanhuan/kmno4zx/huanhuan-chat-internlm2 \
+    --tokenizer-kwargs padding_side='left' truncation='left'     trust_remote_code=True \
+    --model-kwargs device_map='auto' trust_remote_code=True \
+    --max-seq-len 2048 \
+    --max-out-len 16 \
+    --batch-size 2  \
+    --num-gpus 1 \
+    --debug
+```
+
 ## 致谢
 
-***感谢上海人工智能实验室提供的算力~***
+<div align="center">
 
-***感谢小助手对项目的支持~***
+***感谢上海人工智能实验室组织的 书生·浦语实战营 学习活动~***
+
+***感谢 OpenXLab 对项目部署的算力支持~***
+
+***感谢 浦语小助手 对项目的支持~***
+</div>
