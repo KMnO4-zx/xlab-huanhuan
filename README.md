@@ -197,7 +197,7 @@ lmdeploy lite kv_qparams 参数保存路径 转换后模型路径/triton_models/
 ```shell
 python run.py configs/eval_turbomind.py -w 结果保存路径
 ```
-结果文件可在同目录`results`文件夹中获取
+结果文件可在同目录文件[results](./results)中获取
 
 ## 致谢
 
