@@ -1,0 +1,57 @@
+dataset,version,metric,mode,internlm2-chat-7b-turbomind
+--------- 考试 Exam ---------,-,-,-,-
+ceval,-,naive_average,gen,22.37
+agieval,-,-,-,-
+mmlu,-,-,-,-
+GaokaoBench,-,-,-,-
+ARC-c,-,-,-,-
+--------- 语言 Language ---------,-,-,-,-
+WiC,-,-,-,-
+summedits,-,-,-,-
+chid-dev,-,-,-,-
+afqmc-dev,-,-,-,-
+bustm-dev,-,-,-,-
+cluewsc-dev,-,-,-,-
+WSC,-,-,-,-
+winogrande,-,-,-,-
+flores_100,-,-,-,-
+--------- 知识 Knowledge ---------,-,-,-,-
+BoolQ,-,-,-,-
+commonsense_qa,-,-,-,-
+nq,-,-,-,-
+triviaqa,-,-,-,-
+--------- 推理 Reasoning ---------,-,-,-,-
+cmnli,-,-,-,-
+ocnli,-,-,-,-
+ocnli_fc-dev,-,-,-,-
+AX_b,-,-,-,-
+AX_g,-,-,-,-
+CB,-,-,-,-
+RTE,-,-,-,-
+story_cloze,-,-,-,-
+COPA,-,-,-,-
+ReCoRD,-,-,-,-
+hellaswag,-,-,-,-
+piqa,-,-,-,-
+siqa,-,-,-,-
+strategyqa,-,-,-,-
+math,-,-,-,-
+gsm8k,-,-,-,-
+TheoremQA,-,-,-,-
+openai_humaneval,-,-,-,-
+mbpp,-,-,-,-
+bbh,-,-,-,-
+--------- 理解 Understanding ---------,-,-,-,-
+C3,-,-,-,-
+CMRC_dev,-,-,-,-
+DRCD_dev,-,-,-,-
+MultiRC,-,-,-,-
+race-middle,-,-,-,-
+race-high,-,-,-,-
+openbookqa_fact,-,-,-,-
+csl_dev,-,-,-,-
+lcsts,-,-,-,-
+Xsum,-,-,-,-
+eprstmt-dev,-,-,-,-
+lambada,-,-,-,-
+tnews-dev,-,-,-,-
