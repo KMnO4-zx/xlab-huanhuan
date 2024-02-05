@@ -2,7 +2,11 @@
 
 ***OpenXLab 体验地址：https://openxlab.org.cn/apps/detail/BYCJS/Chat_huanhuan***
 
-***Chat-嬛嬛 模型下载地址：https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary***
+***Chat-嬛嬛 模型下载地址：***
+
+***7B: https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary***
+
+***1.8B: https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary***
 
 > *此仓库主要用于将 Chat嬛嬛 项目部署到 OpenXLab 或 ModelScope 。*
 
