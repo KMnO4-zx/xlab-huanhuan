@@ -22,6 +22,8 @@
 
 ## *News*
 
+***2月5日，完成 [InternLM2-chat-1_8B模型的全量微调](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary) ，模型已上传ModelScop2，大家可以来下载哦~***
+
 ***1月22日，Chat-嬛嬛应用在 OpenXLab，累计聊天次数已达 3.64k 次，感谢大家的支持~***
 
 ***1月22日，Chat-嬛嬛模型 魔搭 累计下载 3107 次！***
@@ -30,6 +32,8 @@
 ## MdeolScope 模型
 
 &emsp;&emsp;Chat-嬛嬛使用的是 InternLM2 的 7B 模型，模型参数量为 7B，模型已上传 [ModelScope-Chat嬛嬛](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary) ,可以直接下载推理。
+
+同时也对InternLM2-chat-1_8B模型进行了全量微调，效果很不错哦。模型地址：[ModelScope-Chat嬛嬛-1.8B](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary)
 
 ![Alt text](images/modelscope.png)
 
