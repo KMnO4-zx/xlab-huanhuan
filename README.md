@@ -32,6 +32,10 @@
 
 &emsp;&emsp;***欢迎大家来给[InternLM2](https://github.com/InternLM/InternLM.git)，点点star哦~***
 
+Chat嬛嬛全流程如图所示：
+
+![alt text](./images/chat嬛嬛.png)
+
 ## *News*
 
 ***2月5日，完成 [InternLM2-chat-1_8B模型的全量微调](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary) ，模型已上传ModelScop2，大家可以来下载哦~***
