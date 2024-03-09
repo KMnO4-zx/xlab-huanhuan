@@ -223,10 +223,14 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 
 ## 致谢
 
+### 项目成员
+
 - 宋志学-项目负责人 （Datawhale成员 书生·浦语实战营助教 负责项目规划，数据集制作及模型训练）
 - 肖鸿儒（Datawhale成员 书生·浦语实战营助教 负责数据集收集、模型评测）
 - 邹雨衡（Datawhale成员 负责数据集收集）
 - 杜森（Datawhale成员 负责数据集收集）
+
+### 特别感谢
 
 <div align="center">
 
