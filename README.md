@@ -88,7 +88,7 @@ Chat嬛嬛全流程如图所示：
 
 ***https://openxlab.org.cn/apps/detail/BYCJS/Chat_huanhuan***
 
-![alt text](1a11a706af300cf4478c7f619f409f0.png)
+![alt text](./images/huanhuan_chat.png)
 
 ***Chat-嬛嬛 模型下载地址：***
 
@@ -98,7 +98,7 @@ Chat嬛嬛全流程如图所示：
 
 ***1.8B: https://openxlab.org.cn/models/detail/BYCJS/huanhuan-chat-internlm2-1_8b***
 
-![alt text](image.png)
+![alt text](./images/openxlab_model.jpg)
 
 - ***ModelSope***
 
