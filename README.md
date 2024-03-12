@@ -1,24 +1,68 @@
 # Chat-嬛嬛
+<div align="center">
 
-***OpenXLab 体验地址：https://openxlab.org.cn/apps/detail/BYCJS/Chat_huanhuan***
+<img src="./images/logo.png" width="200"/>
+  <div align="center">
+    <b><font size="5">Chat-嬛嬛</font></b>
+  </div>
 
-***Chat-嬛嬛 模型下载地址：***
+[![license][license-image]][license-url]
+[![evaluation][evaluation-image]][evaluation-url]
 
-- ***OpenXLab***
+[🤗HuggingFace]() | [![OpenXLab_Model][OpenXLab_Model-image]][OpenXLab_Model-url] | [<img src="./images/modelscope_logo.png" width="20px" /> ModelScope][ModelScope-url]
 
-***7B: https://openxlab.org.cn/models/detail/BYCJS/huanhuan-chat-internlm2***
+[![OpenXLab_App][OpenXLab_App-image]][OpenXLab_App-url] | [🆕Update News](#-news) | [🤔Reporting Issues][Issues-url] 丨 [![bilibili][bilibili-image]][bilibili-url]
 
-***1.8B: https://openxlab.org.cn/models/detail/BYCJS/huanhuan-chat-internlm2-1_8b***
+[English](./README_en-US.md) | [简体中文](./README.md)
 
-- ***ModelSope***
 
-***7B: https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary***
 
-***1.8B: https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary***
+[license-image]: ./images/license.svg
+[evaluation-image]: ./images/compass_support.svg
+[OpenXLab_Model-image]: https://cdn-static.openxlab.org.cn/header/openxlab_models.svg
+[OpenXLab_App-image]: https://cdn-static.openxlab.org.cn/app-center/openxlab_app.svg
+[bilibili-image]: https://img.shields.io/badge/AMchat-bilibili-%23fb7299
+
+[license-url]: ./LICENSE
+[evaluation-url]: https://github.com/internLM/OpenCompass/
+[OpenXLab_Model-url]: https://openxlab.org.cn/models/detail/BYCJS/huanhuan-chat-internlm2-1_8b
+[OpenXLab_App-url]: https://openxlab.org.cn/apps/detail/BYCJS/Chat_huanhuan
+[bilibili-url]: https://www.bilibili.com/video/——/
+[ModelScope-url]: https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary
+[Issues-url]: https://github.com/KMnO4-zx/xlab-huanhuan/issues
+
+</div>
+
+## 📝目录
+
+- [Chat-嬛嬛](#chat-嬛嬛)
+  - [📝目录](#目录)
+  - [📖 简介](#-简介)
+  - [🔗 模型及体验地址](#-模型及体验地址)
+  - [🚀 News](#-news)
+  - [🧾 数据集](#-数据集)
+  - [🛠️ 使用方法](#️-使用方法)
+    - [快速开始](#快速开始)
+    - [重新训练](#重新训练)
+      - [环境搭建](#环境搭建)
+      - [Transformers微调](#transformers微调)
+      - [XTuner微调](#xtuner微调)
+    - [部署](#部署)
+      - [OpenXLab 部署 Chat-嬛嬛](#openxlab-部署-chat-嬛嬛)
+      - [LmDeploy部署](#lmdeploy部署)
+    - [测评与量化](#测评与量化)
+      - [OpneCompass 评测](#opnecompass-评测)
+      - [Lmdeploy\&opencompass 量化以及量化评测](#lmdeployopencompass-量化以及量化评测)
+        - [`W4`量化评测](#w4量化评测)
+        - [`KV Cache`量化评测](#kv-cache量化评测)
+  - [💕 致谢](#-致谢)
+    - [项目成员](#项目成员)
+    - [特别感谢](#特别感谢)
+
+
+## 📖 简介
 
 > *此仓库主要用于将 Chat嬛嬛 项目部署到 OpenXLab 或 ModelScope 。*
-
-## 介绍
 
 &emsp;&emsp;Chat-甄嬛是利用《甄嬛传》剧本中所有关于甄嬛的台词和语句，基于[InternLM2](https://github.com/InternLM/InternLM.git)进行LoRA微调或全量微调得到的模仿甄嬛语气的聊天语言模型。
 
@@ -38,7 +82,34 @@ Chat嬛嬛全流程如图所示：
     <img src="./images/huanhuan_img.png" alt="alt text">
 </p>
 
-## *News*
+## 🔗 模型及体验地址
+
+***OpenXLab 体验地址：***
+
+***https://openxlab.org.cn/apps/detail/BYCJS/Chat_huanhuan***
+
+![alt text](1a11a706af300cf4478c7f619f409f0.png)
+
+***Chat-嬛嬛 模型下载地址：***
+
+- ***OpenXLab***
+
+***7B: https://openxlab.org.cn/models/detail/BYCJS/huanhuan-chat-internlm2***
+
+***1.8B: https://openxlab.org.cn/models/detail/BYCJS/huanhuan-chat-internlm2-1_8b***
+
+![alt text](image.png)
+
+- ***ModelSope***
+
+***7B: https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary***
+
+***1.8B: https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary***
+
+![Alt text](images/modelscope.png)
+
+
+## 🚀 News
 
 ***2月5日，完成 [InternLM2-chat-1_8B模型的全量微调](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary) ，模型已上传ModelScop2，大家可以来下载哦~***
 
@@ -47,15 +118,7 @@ Chat嬛嬛全流程如图所示：
 ***1月22日，Chat-嬛嬛模型 魔搭 累计下载 3107 次！***
 
 
-## MdeolScope 模型
-
-&emsp;&emsp;Chat-嬛嬛使用的是 InternLM2 的 7B 模型，模型参数量为 7B，模型已上传 [ModelScope-Chat嬛嬛](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2/summary) ,可以直接下载推理。
-
-同时也对InternLM2-chat-1_8B模型进行了全量微调，效果很不错哦。模型地址：[ModelScope-Chat嬛嬛-1.8B](https://www.modelscope.cn/models/kmno4zx/huanhuan-chat-internlm2-1_8b/summary)
-
-![Alt text](images/modelscope.png)
-
-## 数据集
+## 🧾 数据集
 
 &emsp;&emsp;Chat-嬛嬛 数据集采用《甄嬛传》剧本中所有关于甄嬛的台词和语句，共计 3000 余条，数据集样例：
 
@@ -78,19 +141,82 @@ Chat嬛嬛全流程如图所示：
 
 ![Alt text](images/Extract-Dialogue.png)
 
-## 微调
+## 🛠️ 使用方法
 
-&emsp;&emsp;有两种方案，我更倾向于使用 XTuner 训练， XTuner 有各个模型的一键训练脚本，很方便。且对 InternLM2 的支持度最高。
+### 快速开始
 
-### 方案一：Transformers 
+<!-- ## 微调 -->
 
+1. 下载模型
+
+<details>
+<summary> 从 ModelScope </summary>
+
+参考 [模型的下载](https://www.modelscope.cn/docs/%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%B8%8B%E8%BD%BD) 。
+
+```bash
+pip install modelscope
+```
+
+```python
+from modelscope.hub.snapshot_download import snapshot_download
+model_dir = snapshot_download('kmno4zx/huanhuan-chat-internlm2', cache_dir='./')
+```
+
+</details>
+
+
+<details>
+<summary> 从 OpenXLab </summary>
+
+参考 [下载模型](https://openxlab.org.cn/docs/models/%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B.html) 。
+
+```bash
+pip install openxlab
+```
+
+```python
+from openxlab.model import download
+download(model_repo='BYCJS/huanhuan-chat-internlm2', 
+        model_name='huanhuan-chat-internlm2', output='./')
+```
+
+</details>
+
+2. 本地部署
+
+```bash
+git clone https://github.com/KMnO4-zx/xlab-huanhuan.git
+python start.py
+```
+### 重新训练
+
+#### 环境搭建
+
+1. clone 本项目
+
+```bash
+git clone https://github.com/KMnO4-zx/xlab-huanhuan.git
+cd xlab-huanhuan
+```
+
+2. 创建环境
+
+```bash
+pip install -r requirements.txt
+```
+
+>有两种微调方案，我们更推荐使用 XTuner 训练， XTuner 有各个模型的一键训练脚本，相对便捷。且对 InternLM2 的支持度最高。
+
+#### Transformers微调
 &emsp;&emsp;使用 Transformers 的 Trainer 进行微调，具体脚本可参考[internlm2-chat-lora](./train/internlm2-chat-lora.ipynb)，该脚本在`train`文件夹下。脚本内有较为详细的注释。
 
-### 方案二：XTuner
-
+#### XTuner微调
 &emsp;&emsp;使用 XTuner 进行微调，具体脚本可参考[internlm2_chat_7b_qlora_oasst1_e3_copy.py](./train/internlm2_chat_7b_qlora_oasst1_e3_copy.py)，该脚本在`train`文件夹下。脚本内有较为详细的注释。
 
-## OpenXLab 部署 Chat-嬛嬛
+
+### 部署
+#### OpenXLab 部署 Chat-嬛嬛
 
 &emsp;&emsp;仅需要 Fork 本仓库，然后在 OpenXLab 上创建一个新的项目，将 Fork 的仓库与新建的项目关联，即可在 OpenXLab 上部署 Chat-嬛嬛。
 
@@ -98,7 +224,7 @@ Chat嬛嬛全流程如图所示：
 
 ![Alt text](images/openxlab.png)
 
-## LmDeploy部署
+#### LmDeploy部署
 
 - 首先安装LmDeploy
 
@@ -119,8 +245,8 @@ lmdeploy convert internlm2-chat-7b  要转化的模型地址 --dst-path 转换�
 ```shell
 lmdeploy chat turbomind 转换后的turbomind模型地址
 ```
-
-## OpneCompass 评测
+### 测评与量化
+#### OpneCompass 评测
 
 - 安装 OpenCompass
 
@@ -152,9 +278,9 @@ python run.py \
     --num-gpus 1 \
     --debug
 ```
-  
-## Lmdeploy&opencompass 量化以及量化评测  
-### `W4`量化评测  
+
+#### Lmdeploy&opencompass 量化以及量化评测  
+##### `W4`量化评测  
 
 - `W4`量化
 ```shell
@@ -202,7 +328,7 @@ models = [internlm2_chat_7b]
 ```shell
 python run.py configs/eval_turbomind.py -w 指定结果保存路径
 ```
-### `KV Cache`量化评测 
+##### `KV Cache`量化评测 
 - 转换为`TurbMind`
 ```shell
 lmdeploy convert internlm2-chat-7b  模型路径 --dst-path 转换后模型路径
@@ -221,7 +347,7 @@ python run.py configs/eval_turbomind.py -w 结果保存路径
 ```
 结果文件可在同目录文件[results](./results)中获取
 
-## 致谢
+## 💕 致谢
 
 ### 项目成员
 
