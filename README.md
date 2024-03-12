@@ -35,7 +35,7 @@
 Chat嬛嬛全流程如图所示：
 
 <p align="center">
-    <img src="./images/chat嬛嬛.png" alt="alt text">
+    <img src="./images/huanhuan_img.png" alt="alt text">
 </p>
 
 ## *News*
